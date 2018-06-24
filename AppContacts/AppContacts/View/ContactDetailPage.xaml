@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppContacts.View.ContactDetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre">
+                </Label>
+                <Entry x:Name="NombreTxt"
+                       HorizontalOptions="FillAndExpand"
+                       Placeholder="Ingrese Nombre"
+                       Text="{Binding CurrentContacto.Nombre}">
+                </Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Telefono">
+                </Label>
+                <Entry x:Name="TelefonoTxt"
+                       HorizontalOptions="FillAndExpand"                       
+                       Placeholder="Ingrese Telefono"
+                       Text="{Binding CurrentContacto.Telefono}">
+                </Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Dirección">
+                </Label>
+                <Entry x:Name="DirecciónTxt"
+                       HorizontalOptions="FillAndExpand"                       
+                       Placeholder="Ingrese Dirección"
+                       Text="{Binding CurrentContacto.Direccion}">
+                </Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Notas">
+                </Label>
+                <Editor x:Name="NotasTxt"
+                        HeightRequest="200"
+                        HorizontalOptions="FillAndExpand"
+                       Text="{Binding CurrentContacto.Notas}>
+                </Editor>
+            </StackLayout>
+            <StackLayout>
+                <Button x:Name="BtnGuardar"
+                    Text="Guardar"
+                    Command="{Binding CurrentContacto.BtnGuardar}">
+                </Button>
+                <Button x:Name="BtnEliminar"
+                    Text="Eliminar"
+                    Command="{Binding CurrentContacto.BtnEliminar}">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
